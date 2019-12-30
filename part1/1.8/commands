@@ -1,0 +1,1 @@
+docker run -i -v $(pwd)/logfile.log:/usr/app/logs.txt:Z docker.io/devopsdockeruh/first_volume_exercise

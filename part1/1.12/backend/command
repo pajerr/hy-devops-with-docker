@@ -1,0 +1,2 @@
+docker build -t backend .
+docker run backend -p 8000:8000 --name backend

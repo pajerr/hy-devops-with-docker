@@ -1,0 +1,12 @@
+$ docker run -d --name excercise-1.4 devopsdockeruh/exec_bash_exercise
+12075fb780c0fa632858ba9a4c7d1c22806e8930cf2b721266f6e22da51ac80a
+
+$ docker exec -it excercise-1.4 bash
+root@12075fb780c0:/usr/app# tail -f ./logs.txt
+Mon, 21 Oct 2019 19:39:50 GMT
+Mon, 21 Oct 2019 19:39:53 GMT
+Mon, 21 Oct 2019 19:39:56 GMT
+Mon, 21 Oct 2019 19:39:59 GMT
+Secret message is:
+"Docker is easy"
+
