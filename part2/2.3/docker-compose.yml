@@ -1,0 +1,22 @@
+version: '3.5' 
+
+services: 
+
+    front-end: 
+      image: front
+      ports:
+        - 5000:5000
+      container_name: front-end-2.3
+      environment:
+        - FRONT_URL=http://172.17.0.2:5000
+
+    back-end:
+      image: back
+      ports:
+        - 8000:8000
+      volumes:
+        - .logfile.txt:/logs.txt:Z
+      container_name: back-end-2.3
+      environment:
+        - FRONT_URL=http://172.17.0.2:5000
+

@@ -1,0 +1,10 @@
+version: '3.5' 
+
+services: 
+
+    youtube-dl-ubuntu: 
+      image: devopsdockeruh/first_volume_exercise
+      build: . 
+      volumes: 
+        - ./logfile.txt:/usr/app/logs.txt:z
+      container_name: youtube-dl
