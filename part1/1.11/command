@@ -1,2 +1,3 @@
 docker build -t back-end-exe-1.11 .
-docker run -i -v /home/pajern/Documents/omat/devops-with-docker/exe-1.11/logfile.txt:/logs.txt:Z back-end-exe-1.11 -p 8000:8000
+docker run -i -v $(pwd)/logfile.txt:/nodejs/logs.txt:Z back-end-exe-1.11 -p 8000:8000
+
