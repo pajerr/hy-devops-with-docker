@@ -15,7 +15,7 @@ services:
       ports:
         - 8000:8000
       volumes:
-        - .logfile.txt:/nodejs/logs.txt:Z
+        - ${PWD}/logfile.txt:/nodejs/logs.txt
       container_name: backend-container
       environment:
         - FRONT_URL=http://localhost:5000
