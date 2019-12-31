@@ -2,21 +2,21 @@ version: '3.5'
 
 services: 
 
-    front-end: 
-      image: front
+    frontend: 
+      image: frontend
       ports:
         - 5000:5000
-      container_name: front-end-2.3
+      container_name: frontend-container
       environment:
-        - FRONT_URL=http://172.17.0.2:5000
+        - API_URL=http://localhost:8000
 
-    back-end:
-      image: back
+    backend:
+      image: backend
       ports:
         - 8000:8000
       volumes:
-        - .logfile.txt:/logs.txt:Z
-      container_name: back-end-2.3
+        - .logfile.txt:/nodejs/logs.txt:Z
+      container_name: backend-container
       environment:
-        - FRONT_URL=http://172.17.0.2:5000
+        - FRONT_URL=http://localhost:5000
 
