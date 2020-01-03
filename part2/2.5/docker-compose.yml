@@ -1,0 +1,28 @@
+version: '3.5' 
+
+services: 
+
+    frontend: 
+      image: frontend
+      ports:
+        - 5000:5000
+      container_name: frontend-container
+      environment:
+        - API_URL=http://localhost:8000
+
+    backend:
+      image: backend
+      ports:
+        - 8000:8000
+      volumes:
+        - ${PWD}/logfile.txt:/nodejs/logs.txt
+      container_name: backend-container
+      environment:
+        - FRONT_URL=http://localhost:5000
+        - REDIS=redis
+      links:
+        - redis
+
+    redis:
+      image: redis:latest
+      container_name: redis
