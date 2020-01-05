@@ -1,0 +1,6 @@
+size before
+$ docker images |grep end
+frontend                        latest              594ed9a9ab0a        4 days ago          457MB
+backend                         latest              31529b088d43        4 days ago          360MB
+
+

@@ -1,0 +1,2 @@
+docker build -t backend .
+docker run -i -v $(pwd)/logfile.txt:/nodejs/logs.txt backend -p 8000:8000
