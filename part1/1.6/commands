@@ -1,6 +1,2 @@
 $ docker build -t docker-clock .
 $ docker run docker-clock
-1
-2
-3
-
